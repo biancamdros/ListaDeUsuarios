@@ -15,7 +15,7 @@ class UserList extends StatelessWidget {
           IconButton(
             onPressed: () {
               users.put(
-                  User(id: '77', name: 'Rabiola', email: 'rabiola@mail.com', avatarUrl: ''));
+                  User(id: '77', name: 'Sofia', email: 'sofia@mail.com', avatarUrl: ''));
             },
             icon: Icon(Icons.add_circle_rounded),
           )

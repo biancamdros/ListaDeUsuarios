@@ -10,7 +10,7 @@ const DUMMY_USERS = {
 
   '2': const User(
     id: '2',
-    name: 'Rabi Vale Nada',
+    name: 'Rabi Vale',
     email: 'rabi@gmail.com.br',
     avatarUrl: 'https://cdn.pixabay.com/photo/2013/07/12/19/15/gangster-154425_1280.png'
   ),
