@@ -36,14 +36,21 @@ class Users with ChangeNotifier {
     } else {
       final id = Random().nextDouble().toString();
       _items.putIfAbsent(
-        id,
-        () => User(
-              id: id,
-              name: user.name,
-              email: user.email,
-              avatarUrl: user.avatarUrl,
-            ));
+          id,
+          () => User(
+                id: id,
+                name: user.name,
+                email: user.email,
+                avatarUrl: user.avatarUrl,
+              ));
     }
     notifyListeners();
+  }
+
+  void remove(User user) {
+    if (user != null && user.id != null) {
+      _items.remove(user.id);
+      notifyListeners();
+    }
   }
 }
