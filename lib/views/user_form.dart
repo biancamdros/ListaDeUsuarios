@@ -52,6 +52,15 @@ class UserForm extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(labelText: 'E-mail'),
               onSaved: (value) => _formData['email'] = value!,
+              validator: (value) {
+                if (value == null || value.trim().isEmpty) {
+                  return "E-mail inválido";
+                }
+                if (value.trim().length < 3) {
+                  return "E-mail curto ou inválido.";
+                }
+                return null;
+              },
             ),
             TextFormField(
               decoration: InputDecoration(labelText: 'URL do Avatar'),
